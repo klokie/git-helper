@@ -30,7 +30,7 @@ This key should start with `sk-` and can be generated in your [OpenAI dashboard]
 1. Clone the repo
 
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/klokie/git-helper
 ```
 
 2. Install dependencies
@@ -72,3 +72,13 @@ You can also provide the diff text directly:
 ```bash
 ./git-ai-commit.py "diff --git a/file.txt b/file.txt ..."
 ```
+
+Make an alias in your .zshrc or .bashrc:
+
+```bash
+alias gac="git diff --staged | python git-ai-commit.py"
+```
+
+## License
+
+This project is open-sourced under the MIT License - see the [LICENSE](LICENSE) file for details.
