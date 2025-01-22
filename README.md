@@ -20,10 +20,10 @@ The script will:
 Create a `.env` file with your OpenAI API key:
 
 ```bash
-OPENAI_API_KEY=your_api_key_here
+OPENAI_API_KEY=sk-your-api-key-here
 ```
 
-This key can be generated in your [OpenAI dashboard](https://platform.openai.com/api-keys).
+This key should start with `sk-` and can be generated in your [OpenAI dashboard](https://platform.openai.com/api-keys).
 
 ## Installation
 
@@ -47,8 +47,28 @@ cp .env.example .env
 
 4. Add your OpenAI API key to `.env`
 
-5. Run the script
+5. Show usage
 
 ```bash
 python git-ai-commit.py
+```
+
+## Usage
+
+Get commit message for staged changes:
+
+```bash
+git diff --staged | ./git-ai-commit.py
+```
+
+Or for all changes since last commit:
+
+```bash
+git diff HEAD | ./git-ai-commit.py
+```
+
+You can also provide the diff text directly:
+
+```bash
+./git-ai-commit.py "diff --git a/file.txt b/file.txt ..."
 ```
