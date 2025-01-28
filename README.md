@@ -19,7 +19,7 @@ The script will:
 
 Create a `.env` file with your OpenAI API key:
 
-```bash
+```sh
 OPENAI_API_KEY=sk-your-api-key-here
 ```
 
@@ -29,19 +29,19 @@ This key should start with `sk-` and can be generated in your [OpenAI dashboard]
 
 1. Clone the repo
 
-```bash
+```sh
 git clone https://github.com/klokie/git-helper
 ```
 
 2. Install dependencies
 
-```bash
-pip install -r requirements.txt
+```sh
+pip install .
 ```
 
 3. Set up environment variables
 
-```bash
+```sh
 cp .env.example .env
 ```
 
@@ -49,34 +49,34 @@ cp .env.example .env
 
 5. Show usage
 
-```bash
-python git-ai-commit.py
+```sh
+git_ai_commit
 ```
 
 ## Usage
 
 Get commit message for staged changes:
 
-```bash
-git diff --staged | ./git-ai-commit.py
+```sh
+git diff --staged | git_ai_commit
 ```
 
 Or for all changes since last commit:
 
-```bash
-git diff HEAD | ./git-ai-commit.py
+```sh
+git diff HEAD | git_ai_commit
 ```
 
 You can also provide the diff text directly:
 
-```bash
-./git-ai-commit.py "diff --git a/file.txt b/file.txt ..."
+```sh
+git_ai_commit "diff --git a/file.txt b/file.txt ..."
 ```
 
-Make an alias in your .zshrc or .bashrc:
+Make an alias in your .zshrc or .shrc:
 
-```bash
-alias gac="git diff --staged | python git-ai-commit.py"
+```sh
+alias gac="git diff --staged | git_ai_commit"
 ```
 
 ## License
