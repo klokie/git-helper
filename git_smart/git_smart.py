@@ -11,11 +11,24 @@ def is_interactive():
 def main():
     load_dotenv()
 
+    # Show usage if no input provided
+    if len(sys.argv) == 1 and sys.stdin.isatty():
+        print("Usage: git-smart [diff]")
+        print("Generate AI commit messages from git diffs")
+        print("\nExamples:")
+        print("  git diff | git-smart")
+        print('  git-smart "$(git diff)"')
+        sys.exit(1)
+
     # Get diff from stdin or command line arg
     if len(sys.argv) > 1:
         diff = sys.argv[1]
     else:
-        diff = sys.stdin.read()
+        try:
+            diff = sys.stdin.read()
+        except:
+            print("Error reading from stdin")
+            sys.exit(1)
 
     if not diff:
         print("No diff provided. Stage some changes or pipe a diff.")
