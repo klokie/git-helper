@@ -50,7 +50,7 @@ cp .env.example .env
 5. Show usage
 
 ```sh
-git_ai_commit
+git_smart
 ```
 
 ## Usage
@@ -58,25 +58,25 @@ git_ai_commit
 Get commit message for staged changes:
 
 ```sh
-git diff --staged | git_ai_commit
+git diff --staged | git_smart
 ```
 
 Or for all changes since last commit:
 
 ```sh
-git diff HEAD | git_ai_commit
+git diff HEAD | git_smart
 ```
 
 You can also provide the diff text directly:
 
 ```sh
-git_ai_commit "diff --git a/file.txt b/file.txt ..."
+git_smart "diff --git a/file.txt b/file.txt ..."
 ```
 
 Make an alias in your .zshrc or .shrc:
 
 ```sh
-alias gac="git diff --staged | git_ai_commit"
+alias gac="git diff --staged | git_smart"
 ```
 
 ## License

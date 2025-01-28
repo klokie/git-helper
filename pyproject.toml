@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools_scm[toml]"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "git_ai_commit"
+name = "git_smart"
 description = "AI-powered commit message generator that analyzes git diffs"
 keywords = ["git", "commit", "ai", "openai", "diff", "commit message"]
 license = { text = "MIT License" }
@@ -17,10 +17,10 @@ dynamic = ["version", "readme"]
 readme = { file = ["README.md"] }
 
 [project.scripts]
-git_ai_commit = "git_ai_commit.cli:main"
+git_smart = "git_smart.cli:main"
 
 [tool.setuptools]
-packages = ["git_ai_commit"]
+packages = ["git_smart"]
 include-package-data = false
 
 [tool.setuptools_scm]
