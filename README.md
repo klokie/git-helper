@@ -30,7 +30,7 @@ This key should start with `sk-` and can be generated in your [OpenAI dashboard]
 1. Clone the repo
 
 ```sh
-git clone https://github.com/klokie/git-helper
+git clone https://github.com/klokie/git-smart
 ```
 
 2. Install dependencies

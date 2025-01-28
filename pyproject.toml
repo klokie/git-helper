@@ -7,7 +7,7 @@ name = "git_smart"
 description = "AI-powered commit message generator that analyzes git diffs"
 keywords = ["git", "commit", "ai", "openai", "diff", "commit message"]
 license = { text = "MIT License" }
-urls = { repository = "https://github.com/klokie/git-helper" }
+urls = { repository = "https://github.com/klokie/git-smart" }
 authors = [{ name = "Daniel Grossfeld", email = "github@klokie.com" }]
 requires-python = ">= 3.11"
 dependencies = ["openai>=1.12.0", "python-dotenv~=1.0.0"]
